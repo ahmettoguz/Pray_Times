@@ -109,7 +109,7 @@ function displayRemainingtime(dates) {
     );
 
     if (now < varVakit && output == undefined) {
-      let remaining = convertMsToHM(yatsi - now);
+      let remaining = convertMsToHM(varVakit - now);
       let preBlank = false;
 
       output = `${vakit} Namazına kalan süre : `;
