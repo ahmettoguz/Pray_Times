@@ -10,12 +10,8 @@ $(function () {
     cache: false,
     success: function (data) {
       mainFunction(data.List);
-      setTimeout(() => {
-        $("#result").css("display", "block");
-      }, 100);
     },
     beforeSend: function () {
-      $("#result").css("display", "none");
       //   console.log("loading...");
     },
     error: function (xhr, status, error) {
@@ -27,6 +23,7 @@ $(function () {
 function mainFunction(data) {
   displayTable(data);
   displayRemainingtime(data[0]);
+  $("#result").animate({ opacity: 0.9 }, 1000);
 }
 
 function getDateFromAspNetFormat(date) {
