@@ -23,7 +23,7 @@
 <br/>
 
 <div align="center">
-    <img width=1000 src="/assets/img/demo/demo.png">
+    <img width=1000 src="/assets/img/demo">
 </div>
 
 <br/>
