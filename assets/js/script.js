@@ -5,7 +5,7 @@ $(function () {
     url: url,
     async: false,
     data: {
-      dayafter: 5,
+      dayafter: 6,
     },
     cache: false,
     success: function (data) {
@@ -45,7 +45,8 @@ function displayHrMn(date) {
 function displayDate(i) {
   const dt = new Date();
   dt.setDate(dt.getDate() + i);
-  return dt.toLocaleDateString();
+  let dates = ["Pz", "Pzt", "Sal", "Çrş", "Prş", "Cum", "Cmt"];
+  return dates[dt.getDay()];
 }
 
 function displayTable(data) {

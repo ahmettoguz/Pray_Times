@@ -34,29 +34,33 @@
 
     <title>Namaz Vakitleri</title>
   </head>
-  <body class="bg-light">
+  <body>
     <div class="backgroundLayout"></div>
 
-    <div class="container" id="result">
-      <h2 class="text-center pt-2" id="cityName"></h2>
-      <h4 id="remainingTime" class="w-75 m-auto ps-2 mt-4">Kalan zaman:</h4>
-
+    <div class="container mt-3" id="result">
       <div
-        class="card p-0 w-75 m-auto rounded-3 overflow-hidden border-0 shadow bg-light mt-3 p-1"
+        class="card w-75 m-auto rounded-3 overflow-hidden border-0 shadow bg-body-tertiary p-2"
       >
-        <table class="table table-borderless table-light m-auto p-0 border-1">
-          <thead>
-            <tr>
-              <th scope="col">Tarih</th>
-              <th scope="col">Sabah</th>
-              <th scope="col">Öğle</th>
-              <th scope="col">İkindi</th>
-              <th scope="col">Akşam</th>
-              <th scope="col">Yatsı</th>
-            </tr>
-          </thead>
-          <tbody id="tableContent"></tbody>
-        </table>
+        <h1 class="text-center pt-1" id="cityName"></h2>
+        <h4 id="remainingTime" class="ps-2 pt-3 fw-normal">Kalan zaman:</h4>
+
+        <div
+          class="card w-100 m-auto mt-2 rounded-3 overflow-hidden border-0 shadow bg-light p-1"
+        >
+          <table class="table table-borderless table-light m-auto p-0 border-1">
+            <thead>
+              <tr>
+                <th scope="col">Tarih</th>
+                <th scope="col">Sabah</th>
+                <th scope="col">Öğle</th>
+                <th scope="col">İkindi</th>
+                <th scope="col">Akşam</th>
+                <th scope="col">Yatsı</th>
+              </tr>
+            </thead>
+            <tbody id="tableContent"></tbody>
+          </table>
+        </div>
       </div>
     </div>
   </body>
