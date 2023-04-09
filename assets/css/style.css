@@ -70,12 +70,46 @@ tbody tr:nth-of-type(even) {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   tbody tr:nth-of-type(1) td {
     font-size: 20px;
   }
 
   tbody td {
     font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  tbody tr:nth-of-type(1) td {
+    font-size: 15px;
+  }
+
+  tbody td {
+    font-size: 12px;
+  }
+
+  thead th {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  h2 {
+    font-size: 18px;
+  }
+  #remainingTime {
+    font-size: 15px;
+  }
+  tbody tr:nth-of-type(1) td {
+    font-size: 15px;
+  }
+
+  tbody td {
+    font-size: 12px;
+  }
+
+  thead th {
+    font-size: 12px;
   }
 }

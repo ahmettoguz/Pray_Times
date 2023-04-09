@@ -86,7 +86,6 @@ function convertMsToHM(ms) {
 }
 
 function displayRemainingtime(dates) {
-  console.log(dates);
   let output;
   let i = 2;
   let now = new Date();
