@@ -22,7 +22,7 @@ $(function () {
 
 function mainFunction(data) {
   displayTable(data);
-  displayRemainingtime(data[0]);
+  displayRemainingtime(data[0], data[1].Imsak);
   $("#result").animate({ opacity: 0.9 }, 1000);
 }
 
@@ -82,7 +82,7 @@ function convertMsToHM(ms) {
   return { hr: h, min: m };
 }
 
-function displayRemainingtime(dates) {
+function displayRemainingtime(dates, tomorrowSabah) {
   let output;
   let i = 2;
   let now = new Date();
@@ -132,6 +132,33 @@ function displayRemainingtime(dates) {
 
     i++;
   });
+
+  if (output == undefined) {
+    tomorrowSabah = new Date(getDateFromAspNetFormat(tomorrowSabah));
+    let remaining = convertMsToHM(tomorrowSabah - now);
+    let preBlank = false;
+
+    output = `Yarınki sabah namazına kalan süre : `;
+
+    if (remaining.hr != 0) {
+      output += remaining.hr + " Saat";
+      preBlank = true;
+    }
+    if (remaining.min != 0) {
+      if (preBlank == true) output += " ";
+      output += remaining.min + " Dakika";
+    }
+    output += ".";
+
+    // underline that field
+    $(`#tableContent > tr:nth-child(2) > td:nth-child(2)`).css({
+      "text-decoration": "underline",
+      "text-decoration-thickness": "2px",
+      "text-underline-offset": "5px",
+      "text-decoration-color": "darkorange",
+      "-moz-text-decoration-color": "darkorange",
+    });
+  }
 
   $("#remainingTime").html(output);
 }
