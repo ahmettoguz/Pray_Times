@@ -23,6 +23,9 @@ $(function () {
 function mainFunction(data) {
   displayTable(data);
   displayRemainingtime(data[0], data[1].Imsak);
+  setInterval(() => {
+    displayRemainingtime(data[0], data[1].Imsak);
+  }, 1000);
   $("#result").animate({ opacity: 0.9 }, 1000);
 }
 
