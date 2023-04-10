@@ -1,23 +1,5 @@
 $(function () {
-  let url = "https://www.sabah.com.tr/json/getpraytimes/ankara";
-  $.ajax({
-    type: "GET",
-    url: url,
-    async: false,
-    data: {
-      dayafter: 6,
-    },
-    cache: false,
-    success: function (data) {
-      mainFunction(data.List);
-    },
-    beforeSend: function () {
-      //   console.log("loading...");
-    },
-    error: function (xhr, status, error) {
-      console.log("Error in ajax request : " + error);
-    },
-  });
+  getCityName();
 });
 
 function mainFunction(data) {
@@ -164,4 +146,33 @@ function displayRemainingtime(dates, tomorrowSabah) {
   }
 
   $("#remainingTime").html(output);
+}
+
+function getTimes(cityName) {
+  let url = `https://www.sabah.com.tr/json/getpraytimes/${cityName}`;
+  $.ajax({
+    type: "GET",
+    url: url,
+    async: false,
+    data: {
+      dayafter: 6,
+    },
+    cache: false,
+    success: function (data) {
+      mainFunction(data.List);
+    },
+    beforeSend: function () {
+      //   console.log("loading...");
+    },
+    error: function (xhr, status, error) {
+      console.log("Error in ajax request : " + error);
+    },
+  });
+}
+
+function getCityName() {
+  let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
+  $.get(url).then(function (data) {
+    getTimes(data.CityName.toLocaleLowerCase());
+  });
 }
