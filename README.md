@@ -30,7 +30,7 @@
 
 ## Introduction
 
-This is a java desktop application with GUI frame. Basically you can perform key combinations with gui without keyboard interaction especially it is beneficial for them who need to use key combination frequently.
+This project is a web page which exhibit the pray times (namaz vakitleri) dynamically according to your city. There is no unnecessary advertisements.
 
 <br/>
 
@@ -44,8 +44,10 @@ This is a java desktop application with GUI frame. Basically you can perform key
 
 ## Features
 
+* City is defined as dynamicly according to your location.
 * Next pray time is specified.
 * Times are displayed weekly and dynamic.
+* No advertisements, no unnecessary informations, no unnecessary pages.
 
 <br/>
 
