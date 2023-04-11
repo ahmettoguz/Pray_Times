@@ -171,8 +171,11 @@ function getTimes(cityName) {
 }
 
 function getCityName() {
-  let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
+  // let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
+  // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
+  let url = "https://geoloc.hurriyet.com.tr/api/country/";
   $.get(url).then(function (data) {
-    getTimes(data.CityName.toLocaleLowerCase());
+    console.log(data);
+    getTimes(data.City.toLocaleLowerCase());
   });
 }
