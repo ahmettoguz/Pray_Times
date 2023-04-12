@@ -175,7 +175,7 @@ function getCityName() {
   // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
   let url = "https://geoloc.hurriyet.com.tr/api/country/";
   $.get(url).then(function (data) {
-    console.log(data);
+    // console.log(data);
     getTimes(data.City.toLocaleLowerCase());
   });
 }
