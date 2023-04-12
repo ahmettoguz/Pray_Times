@@ -16,7 +16,7 @@ body {
 }
 
 .backgroundLayout {
-  background-image: url(../img/bg.png);
+  background-image: url(../img/bg-min.png);
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -62,11 +62,12 @@ tbody tr:nth-of-type(even) {
 }
 
 footer {
+  font-style: italic;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   text-align: center;
-  background: linear-gradient(90deg, gray -100%, black 50%, gray 200%);
-  color: white;
+  background: linear-gradient(90deg, gray -150%, black 50%, gray 250%);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes blinkTr {
@@ -89,7 +90,7 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  .row{
+  .row {
     margin: 25px 2px 0 2px !important;
   }
 }
