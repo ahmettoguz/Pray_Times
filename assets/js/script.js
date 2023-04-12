@@ -73,7 +73,7 @@ function displayRemainingtime(dates, tomorrowSabah) {
   let now = new Date();
   let sabah = new Date(getDateFromAspNetFormat(dates.Imsak));
   let ogle = new Date(getDateFromAspNetFormat(dates.Ogle));
-  let i̇kindi = new Date(getDateFromAspNetFormat(dates.Ikindi));
+  let ikindi = new Date(getDateFromAspNetFormat(dates.Ikindi));
   let aksam = new Date(getDateFromAspNetFormat(dates.Aksam));
   let yatsi = new Date(getDateFromAspNetFormat(dates.Yatsi));
 
@@ -87,6 +87,7 @@ function displayRemainingtime(dates, tomorrowSabah) {
         .replaceAll("ğ", "g")
         .replaceAll("ş", "s")
         .replaceAll("ı", "i")
+        .replaceAll("i̇", "i")
     );
 
     if (now < varVakit && output == undefined) {
