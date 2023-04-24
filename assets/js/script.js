@@ -5,10 +5,13 @@ $(function () {
 function mainFunction(data) {
   displayTable(data);
   displayRemainingtime(data[0], data[1].Imsak);
+  displayTodayDate();
   setInterval(() => {
     displayRemainingtime(data[0], data[1].Imsak);
+    displayTodayDate();
   }, 1000);
   $("#result").animate({ opacity: 0.9 }, 1000);
+  $("footer").animate({ opacity: 0.9 }, 1000);
 }
 
 function getDateFromAspNetFormat(date) {
@@ -177,6 +180,43 @@ function getCityName() {
   let url = "https://geoloc.hurriyet.com.tr/api/country/";
   $.get(url).then(function (data) {
     // console.log(data);
-    getTimes(data.City.toLocaleLowerCase());
+    // getTimes(data.City.toLocaleLowerCase());
   });
+
+  // Temporarily work static
+  getTimes("Ankara");
+}
+
+function displayTodayDate() {
+  let t = new Date();
+  let trDates = [
+    "Pazartesi",
+    "Salı",
+    "Çarşamba",
+    "Perşembe",
+    "Cuma",
+    "Cumartesi",
+    "Pazar",
+  ];
+
+  let trMonths = [
+    "Ocak",
+    "Şubat",
+    "Mart",
+    "Nisan",
+    "Mayıs",
+    "Haziran",
+    "Temmuz",
+    "Ağustos",
+    "Eylül",
+    "Ekim",
+    "Kasım",
+    "Aralık",
+  ];
+
+  let output = `${t.getDate()} ${trMonths[t.getMonth()]} ${t.getFullYear()}  ${
+    trDates[t.getDay() - 1]
+  } - ${t.getHours()}:${t.getMinutes()}`;
+
+  $("#todayDate").html(output);
 }
