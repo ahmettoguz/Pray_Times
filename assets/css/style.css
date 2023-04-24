@@ -117,7 +117,8 @@ footer {
   h2 {
     font-size: 18px;
   }
-  #remainingTime {
+  #remainingTime,
+  #todayDate {
     font-size: 15px;
   }
   tbody tr:nth-of-type(1) td {
