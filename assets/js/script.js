@@ -109,6 +109,11 @@ function displayRemainingtime(dates, tomorrowSabah) {
       }
       output += ".";
 
+      // remove previous lines
+      $(`#tableContent > tr > td`).css({
+        "text-decoration": "none",
+      });
+
       // underline that field
       $(`#tableContent > tr:nth-child(1) > td:nth-child(${i})`).css({
         "text-decoration": "underline",
@@ -138,6 +143,11 @@ function displayRemainingtime(dates, tomorrowSabah) {
       output += remaining.min + " Dakika";
     }
     output += ".";
+
+    // remove previous lines
+    $(`#tableContent > tr > td`).css({
+      "text-decoration": "none",
+    });
 
     // underline that field
     $(`#tableContent > tr:nth-child(2) > td:nth-child(2)`).css({
