@@ -216,7 +216,7 @@ function displayTodayDate() {
 
   let output = `${t.getDate()} ${trMonths[t.getMonth()]} ${t.getFullYear()}  ${
     trDates[t.getDay() - 1]
-  } - ${t.getHours()}:${t.getMinutes()}`;
+  } - ${("00" + t.getHours()).slice(-2)}:${("00" + t.getMinutes()).slice(-2)}`;
 
   $("#todayDate").html(output);
 }
