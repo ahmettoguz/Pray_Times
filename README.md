@@ -20,8 +20,8 @@
 
 ## Demo
 
-<br/>
-
+<a href="https://ahmettoguz.github.io/Pray_Times/" target="_blank">Visit https://ahmettoguz.github.io/Pray_Times/</a>
+    
 <div align="center">
     <img width=1000 src="/assets/img/demo/demo2.png">
 </div>
