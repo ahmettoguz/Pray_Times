@@ -37,7 +37,7 @@ This project is a web page which exhibit the pray times (namaz vakitleri) dynami
 ## Technologies
 
 * Html
-* Js
+* Js, Ajax
 * Css
 
 <br/>
