@@ -187,14 +187,13 @@ function getTimes(cityName) {
 function getCityName() {
   // let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
   // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
-  let url = "https://geoloc.hurriyet.com.tr/api/country/";
+  let url = "https://d.pub.network/v2/init?siteId=583&env=PROD";
   $.get(url).then(function (data) {
-    // console.log(data);
-    // getTimes(data.City.toLocaleLowerCase());
+    let cityName = data.location.cityName.toLocaleLowerCase();
+    
+    // dynamic city name
+    getTimes(cityName);
   });
-
-  // Temporarily work static
-  getTimes("Ankara");
 }
 
 function displayTodayDate() {
