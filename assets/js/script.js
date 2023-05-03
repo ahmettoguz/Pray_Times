@@ -187,9 +187,9 @@ function getTimes(cityName) {
 function getCityName() {
   // let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
   // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
-  let url = "https://d.pub.network/v2/init?siteId=583&env=PROD";
+  let url = "https://ipapi.co/json/";
   $.get(url).then(function (data) {
-    let cityName = data.location.cityName.toLocaleLowerCase();
+    let cityName = data.city.toLocaleLowerCase().replaceAll("ı", "i").replaceAll("ü", "u").replaceAll("ö", "o");
     
     // dynamic city name
     getTimes(cityName);
