@@ -189,8 +189,12 @@ function getCityName() {
   // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
   let url = "https://ipapi.co/json/";
   $.get(url).then(function (data) {
-    let cityName = data.city.toLocaleLowerCase().replaceAll("ı", "i").replaceAll("ü", "u").replaceAll("ö", "o");
-    
+    let cityName = data.city
+      .toLocaleLowerCase()
+      .replaceAll("ı", "i")
+      .replaceAll("ü", "u")
+      .replaceAll("ö", "o");
+
     // dynamic city name
     getTimes(cityName);
   });
@@ -199,13 +203,13 @@ function getCityName() {
 function displayTodayDate() {
   let t = new Date();
   let trDates = [
+    "Pazar",
     "Pazartesi",
     "Salı",
     "Çarşamba",
     "Perşembe",
     "Cuma",
     "Cumartesi",
-    "Pazar",
   ];
 
   let trMonths = [
@@ -224,7 +228,7 @@ function displayTodayDate() {
   ];
 
   let output = `${t.getDate()} ${trMonths[t.getMonth()]} ${t.getFullYear()}  ${
-    trDates[t.getDay() - 1]
+    trDates[t.getDay()]
   } - ${("00" + t.getHours()).slice(-2)}:${("00" + t.getMinutes()).slice(-2)}`;
 
   $("#todayDate").html(output);
