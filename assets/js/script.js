@@ -184,20 +184,60 @@ function getTimes(cityName) {
   });
 }
 
+function getMaxFreqItem(arr) {
+  const frequency = {};
+  let maxFreqItem = null;
+  let maxFreq = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    frequency[item] = frequency[item] ? frequency[item] + 1 : 1;
+
+    if (frequency[item] > maxFreq) {
+      maxFreqItem = item;
+      maxFreq = frequency[item];
+    }
+  }
+
+  return maxFreqItem;
+}
+
 function getCityName() {
-  // let url = "https://ipcheck.tmgrup.com.tr/ipcheck/getcity";
-  // let url = "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location";
-  let url = "https://ipapi.co/json/";
-  $.get(url).then(function (data) {
+  // get city name with comparing 2 different api results for accuracy because sometimes one of them gives wrong location
+  let possibleLocations = [];
+
+  const request1 = $.get("https://ipapi.co/json/").then(function (data) {
     let cityName = data.city
       .toLocaleLowerCase()
       .replaceAll("ı", "i")
       .replaceAll("ü", "u")
       .replaceAll("ö", "o");
 
-    // dynamic city name
-    getTimes(cityName);
+    possibleLocations.push(cityName);
   });
+
+  const request2 = $.get("https://ipcheck.tmgrup.com.tr/ipcheck/getcity").then(
+    function (data) {
+      let cityName = data.CityName.toLocaleLowerCase()
+        .replaceAll("ı", "i")
+        .replaceAll("ü", "u")
+        .replaceAll("ö", "o");
+
+      possibleLocations.push(cityName);
+    }
+  );
+
+  // wait for response
+  Promise.all([request1, request2])
+    .then(function () {
+      // get the most repeated city name and return
+      let cityName = getMaxFreqItem(possibleLocations);
+      // console.log(cityName);
+      getTimes(cityName);
+    })
+    .catch(function (error) {
+      console.error("Error occurred:", error);
+    });
 }
 
 function displayTodayDate() {
