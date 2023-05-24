@@ -1,0 +1,83 @@
+{
+  "Success": true,
+  "List": [
+    {
+      "Id": "5c061878-ea5c-4cb5-840f-37df82b0fe67",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1684888320000)/",
+      "Gunes": "/Date(1684894800000)/",
+      "Ogle": "/Date(1684921800000)/",
+      "Ikindi": "/Date(1684935960000)/",
+      "Aksam": "/Date(1684948260000)/",
+      "Yatsi": "/Date(1684954260000)/",
+      "PrayDate": "/Date(1684875600000)/",
+      "CreatedDate": "/Date(1682402409797)/"
+    },
+    {
+      "Id": "20d646b2-bbd6-46d7-ad8e-3373a555eef9",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1684974660000)/",
+      "Gunes": "/Date(1684981140000)/",
+      "Ogle": "/Date(1685008200000)/",
+      "Ikindi": "/Date(1685022360000)/",
+      "Aksam": "/Date(1685034720000)/",
+      "Yatsi": "/Date(1685040720000)/",
+      "PrayDate": "/Date(1684962000000)/",
+      "CreatedDate": "/Date(1682402409800)/"
+    },
+    {
+      "Id": "6a78a58a-64eb-4362-9fbd-dd32032034ca",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1685061000000)/",
+      "Gunes": "/Date(1685067480000)/",
+      "Ogle": "/Date(1685094660000)/",
+      "Ikindi": "/Date(1685108760000)/",
+      "Aksam": "/Date(1685121180000)/",
+      "Yatsi": "/Date(1685127180000)/",
+      "PrayDate": "/Date(1685048400000)/",
+      "CreatedDate": "/Date(1682834408873)/"
+    },
+    {
+      "Id": "be9ca825-5824-47e9-b825-50a9c8472326",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1685147340000)/",
+      "Gunes": "/Date(1685153880000)/",
+      "Ogle": "/Date(1685181060000)/",
+      "Ikindi": "/Date(1685195220000)/",
+      "Aksam": "/Date(1685207640000)/",
+      "Yatsi": "/Date(1685213700000)/",
+      "PrayDate": "/Date(1685134800000)/",
+      "CreatedDate": "/Date(1682834408873)/"
+    },
+    {
+      "Id": "664feaa2-7f5b-4989-b069-74e8bd31b525",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1685233680000)/",
+      "Gunes": "/Date(1685240220000)/",
+      "Ogle": "/Date(1685267460000)/",
+      "Ikindi": "/Date(1685281620000)/",
+      "Aksam": "/Date(1685294040000)/",
+      "Yatsi": "/Date(1685300160000)/",
+      "PrayDate": "/Date(1685221200000)/",
+      "CreatedDate": "/Date(1682834408873)/"
+    },
+    {
+      "Id": "b6311e94-14b2-44e4-b5e1-e801d95112b1",
+      "CityId": "d6536c24-dc36-48da-a82e-f85e761a7a62",
+      "CityName": "ANKARA",
+      "Imsak": "/Date(1685320020000)/",
+      "Gunes": "/Date(1685326620000)/",
+      "Ogle": "/Date(1685353860000)/",
+      "Ikindi": "/Date(1685368020000)/",
+      "Aksam": "/Date(1685380500000)/",
+      "Yatsi": "/Date(1685386620000)/",
+      "PrayDate": "/Date(1685307600000)/",
+      "CreatedDate": "/Date(1682834408873)/"
+    }
+  ]
+}
