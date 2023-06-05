@@ -204,40 +204,41 @@ function getMaxFreqItem(arr) {
 
 function getCityName() {
   // get city name with comparing 2 different api results for accuracy because sometimes one of them gives wrong location
-  let possibleLocations = [];
+  // let possibleLocations = [];
 
-  const request1 = $.get("https://ipapi.co/json/").then(function (data) {
-    let cityName = data.city
-      .toLocaleLowerCase()
-      .replaceAll("ı", "i")
-      .replaceAll("ü", "u")
-      .replaceAll("ö", "o");
+  // const request1 = $.get("https://ipapi.co/json/").then(function (data) {
+  //   let cityName = data.city
+  //     .toLocaleLowerCase()
+  //     .replaceAll("ı", "i")
+  //     .replaceAll("ü", "u")
+  //     .replaceAll("ö", "o");
 
-    possibleLocations.push(cityName);
-  });
+  //   possibleLocations.push(cityName);
+  // });
 
-  const request2 = $.get("https://ipcheck.tmgrup.com.tr/ipcheck/getcity").then(
-    function (data) {
-      let cityName = data.CityName.toLocaleLowerCase()
-        .replaceAll("ı", "i")
-        .replaceAll("ü", "u")
-        .replaceAll("ö", "o");
+  // const request2 = $.get("https://ipcheck.tmgrup.com.tr/ipcheck/getcity").then(
+  //   function (data) {
+  //     let cityName = data.CityName.toLocaleLowerCase()
+  //       .replaceAll("ı", "i")
+  //       .replaceAll("ü", "u")
+  //       .replaceAll("ö", "o");
 
-      possibleLocations.push(cityName);
-    }
-  );
+  //     possibleLocations.push(cityName);
+  //   }
+  // );
 
-  // wait for response
-  Promise.all([request1, request2])
-    .then(function () {
-      // get the most repeated city name and return
-      let cityName = getMaxFreqItem(possibleLocations);
-      // console.log(cityName);
-      getTimes(cityName);
-    })
-    .catch(function (error) {
-      console.error("Error occurred:", error);
-    });
+  // // wait for response
+  // Promise.all([request1, request2])
+  //   .then(function () {
+  //     // get the most repeated city name and return
+  //     let cityName = getMaxFreqItem(possibleLocations);
+  //     // console.log(cityName);
+  //     getTimes(cityName);
+  //   })
+  //   .catch(function (error) {
+  //     console.error("Error occurred:", error);
+  //   });
+  getTimes("ankara");
 }
 
 function displayTodayDate() {
