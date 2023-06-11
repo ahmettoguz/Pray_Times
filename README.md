@@ -30,7 +30,7 @@
 
 ## Introduction
 
-This project is a web page which exhibit the pray times (namaz vakitleri) dynamically according to your city. There is no unnecessary advertisements.
+This project is a web page which exhibit the pray times.
 
 <br/>
 
@@ -44,9 +44,8 @@ This project is a web page which exhibit the pray times (namaz vakitleri) dynami
 
 ## Features
 
-* City is defined as dynamicly according to your location.
-* Next pray time is specified.
-* Times are displayed weekly and dynamic.
+* Next pray times are specified.
+* Times are displayed weekly and dynamically.
 * No advertisements, no unnecessary informations, no unnecessary pages.
 
 <br/>
