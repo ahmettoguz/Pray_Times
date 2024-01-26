@@ -163,14 +163,14 @@ function displayRemainingtime(dates, tomorrowSabah) {
 }
 
 function getTimes(cityName) {
-  let url = `https://www.sabah.com.tr/json/getpraytimes/${cityName}`;
+  let url = `https://www.sabah.com.tr/json/getpraytimes/${cityName}/6`;
   $.ajax({
     type: "GET",
     url: url,
     async: false,
-    data: {
-      dayafter: 6,
-    },
+    // data: {
+    //   dayafter: 6,
+    // },
     cache: false,
     success: function (data) {
       mainFunction(data.List);
