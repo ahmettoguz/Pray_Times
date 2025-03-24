@@ -173,7 +173,11 @@ function getTimes(cityName) {
     // },
     cache: false,
     success: function (data) {
-      mainFunction(data.List.slice(0, 8));
+      if (data.List.length > 0) mainFunction(data.List.slice(0, 8));
+      else {
+        // console.log("cannot fetch");
+        getTimes("ankara");
+      }
     },
     beforeSend: function () {
       //   console.log("loading...");
